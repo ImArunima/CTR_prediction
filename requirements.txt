@@ -1,0 +1,13 @@
+Flask
+Flask-Cors
+gunicorn
+sklearn
+scikit-learn
+pickle5
+numpy
+pandas
+click
+itsdangerous
+jitja2
+MarkupSafe
+Werkzeug

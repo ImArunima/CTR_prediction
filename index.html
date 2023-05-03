@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:black">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>CTR Prediction of an Email Campaign</h2>
+            <h3>Subject Length</h3>
+            <input id="first" name="sub_len" type="number ">
+            <h3>Body Length</h3><input id="second" name="body_len" required="required">
+            <h3>Mean Paragraph Length</h3><input id="third" name="mean_para_len" required="required">
+            
+            <h3>What Is the Category?</h3><select name="category" id="cat" required="required">
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5</option>
+             <option value="6">6</option>
+             <option value="7">7</option>
+             <option value="8">8</option>
+             <option value="9">9</option>
+             <option value="10">10</option>
+             <option value="11">11</option>
+             <option value="12">12</option>
+             <option value="13">13</option>
+             <option value="14">14</option>
+             <option value="15">15</option>  
+              </select>
+              
+            <h3>Number of CTA</h3><input id="fourth" name="no_of_CTA" required="required">
+            <h3>Mean CTA Length</h3><input id="fifth" name="mean_CTA_length" required="required">
+           
+               
+           
+            <br><br><button id="sub" type="submit ">Calculate the CTR</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: lightgray;
+            text-align: center;
+            padding: 0px;
+        }
+
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: red;
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+
+        #cat {
+            width: 65px;
+            height: 38px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #cat:hover {
+            background-color: yellow;
+        }
+
+
+        #sub {
+            width: 140px;
+            height: 50px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #sub:hover {
+            background-color: orange;
+        }
+
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fifth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>

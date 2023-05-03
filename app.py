@@ -10,13 +10,12 @@ import numpy as np
 import pickle
 import os
 
-os.chdir(R'E:\model_deployment')
 
 #Create an app object using the Flask class. 
 app = Flask(__name__)
 
 #Load the trained model. (Pickle file)
-model = pickle.load(open('models/model.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
 
 #use the route() decorator to tell Flask what URL should trigger our function.
 @app.route('/', methods = ['GET'])
